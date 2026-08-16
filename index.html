@@ -607,6 +607,33 @@
             .hero { padding: 48px 0 40px; }
             .section { padding: 48px 0; }
         }
+
+        /* ============ Network & Affiliate Sections ============ */
+        .network-promo-section { background: var(--ink); color: var(--cream); padding: 56px 0; text-align: center; }
+        .network-promo-section h2 { color: var(--cream-light); font-size: clamp(24px, 3vw, 36px); margin-bottom: 12px; }
+        .network-promo-section p { color: var(--cream-dark); font-size: 15px; margin-bottom: 28px; max-width: 500px; margin-left: auto; margin-right: auto; }
+        .network-promo-section .network-links { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+        .network-promo-section .network-links a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 20px; border: 1px solid var(--gold); border-radius: 2px; color: var(--cream); font-size: 14px; font-weight: 500; transition: all .2s; }
+        .network-promo-section .network-links a:hover { background: var(--terracotta); border-color: var(--terracotta); color: var(--cream-light); }
+
+        .recommended-supplies { background: var(--cream); padding: 56px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+        .recommended-supplies .container { max-width: 740px; }
+        .recommended-supplies h2 { font-size: clamp(24px, 3vw, 34px); margin-bottom: 8px; }
+        .recommended-supplies .supplies-intro { font-size: 15px; color: var(--ink-muted); margin-bottom: 28px; }
+        .supplies-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        .supply-item { display: flex; gap: 16px; align-items: flex-start; padding: 20px; background: var(--white); border-radius: 6px; border: 1px solid var(--line); }
+        .supply-item img { width: 80px; height: 80px; object-fit: cover; border-radius: 4px; flex-shrink: 0; }
+        .supply-item .supply-info h3 { font-size: 16px; margin-bottom: 4px; }
+        .supply-item .supply-info a { font-weight: 600; }
+        .supply-item .supply-info p { font-size: 13px; color: var(--ink-muted); line-height: 1.5; }
+        .supply-disclosure { font-size: 12px; color: var(--ink-muted); font-style: italic; margin-top: 20px; }
+
+        .network-footer { text-align: center; padding: 20px; border-top: 1px solid var(--line); margin-top: 24px; font-size: 13px; color: var(--ink-muted); }
+        .network-footer a { color: var(--terracotta); margin: 0 6px; }
+
+        @media (max-width: 680px) {
+            .supplies-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
@@ -660,7 +687,7 @@
                 </div>
                 <div class="hero-image-wrap">
                     <span class="hero-image-tag">Cover</span>
-                    <img src="https://images.unsplash.com/photo-1578926375605-eafab1de8f67?w=900&q=80" alt="Artist at work in a studio with warm terracotta light, oil painting on a large canvas" loading="eager">
+                    <img src="articles/headers/artist-spotlight-studio.png" alt="Artist at work in a studio with warm terracotta light, oil painting on a large canvas" loading="eager">
                 </div>
             </div>
         </div>
@@ -687,7 +714,7 @@
         <div class="container">
             <div class="featured-wide">
                 <div class="fw-image">
-                    <img src="https://images.unsplash.com/photo-1513519247252-1d1c47ee1ad0?w=800&q=80" alt="Large abstract canvas in a gallery with terracotta and ochre tones" loading="lazy">
+                    <img src="articles/headers/oil-painting-essentials.png" alt="Large abstract canvas in a gallery with terracotta and ochre tones" loading="lazy">
                 </div>
                 <div class="fw-content">
                     <span class="card-category">Studio Visit</span>
@@ -711,7 +738,7 @@
             <div class="article-grid">
                 <article class="card">
                     <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1547826039-bfc35e050d09?w=600&q=80" alt="Detail of an oil painting with thick impasto brushwork in warm tones" loading="lazy">
+                        <img src="articles/headers/oil-painting-impasto.png" alt="Detail of an oil painting with thick impasto brushwork in warm tones" loading="lazy">
                     </div>
                     <span class="card-category">Painting</span>
                     <h3><a href="article.html">Why Impasto Never Really Went Away</a></h3>
@@ -725,7 +752,7 @@
 
                 <article class="card">
                     <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1531913764164-f85c52e6e484?w=600&q=80" alt="Bronze sculpture displayed in a minimalist gallery space" loading="lazy">
+                        <img src="articles/headers/artist-spotlight-tomas-herrera.png" alt="Bronze sculpture displayed in a minimalist gallery space" loading="lazy">
                     </div>
                     <span class="card-category">Sculpture</span>
                     <h3><a href="article.html">Bronze, Reconsidered: Five Sculptors Redefining the Medium</a></h3>
@@ -739,7 +766,7 @@
 
                 <article class="card">
                     <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1561214115-f2f134fae1aa?w=600&q=80" alt="Illustrator's desk with ink drawings and brushes arranged neatly" loading="lazy">
+                        <img src="articles/headers/digital-art-creation.png" alt="Illustrator's desk with ink drawings and brushes arranged neatly" loading="lazy">
                     </div>
                     <span class="card-category">Illustration</span>
                     <h3><a href="article.html">The Ink-First Movement: Why Illustrators Are Returning to the Pen</a></h3>
@@ -753,7 +780,7 @@
 
                 <article class="card">
                     <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1499781350541-7783c6751653?w=600&q=80" alt="Gallery wall with a series of framed artworks in warm light" loading="lazy">
+                        <img src="articles/headers/digital-art-authenticity.png" alt="Gallery wall with a series of framed artworks in warm light" loading="lazy">
                     </div>
                     <span class="card-category">Exhibitions</span>
                     <h3><a href="article.html">What We Saw at the Venice Biennale: Eight Pavilions That Stayed</a></h3>
@@ -767,7 +794,7 @@
 
                 <article class="card">
                     <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1554188248-986cbb9a3453?w=600&q=80" alt="Digital artwork displayed on a large screen at an art fair" loading="lazy">
+                        <img src="articles/headers/photography-finding-your-eye.png" alt="Digital artwork displayed on a large screen at an art fair" loading="lazy">
                     </div>
                     <span class="card-category">Digital Art</span>
                     <h3><a href="article.html">Beyond the Screen: Where Digital Art Meets the Physical Object</a></h3>
@@ -781,7 +808,7 @@
 
                 <article class="card">
                     <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1577720580479-7d7399e45822?w=600&q=80" alt="Close-up of an artist's hands mixing oil paint on a wooden palette" loading="lazy">
+                        <img src="articles/headers/bauhaus-art-history-myth.png" alt="Close-up of an artist's hands mixing oil paint on a wooden palette" loading="lazy">
                     </div>
                     <span class="card-category">Art History</span>
                     <h3><a href="article.html">The Forgotten Women of the Bauhaus Weaving Workshops</a></h3>
@@ -790,6 +817,20 @@
                         <span class="author">Priya Anand</span>
                         <span class="dot-sep">●</span>
                         <time datetime="2026-07-01">Jul 1</time>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image">
+                        <img src="articles/headers/watercolor-techniques.png" alt="Watercolor sunset painting with warm terracotta and gold tones" loading="lazy">
+                    </div>
+                    <span class="card-category">Tutorials</span>
+                    <h3><a href="articles/watercolor-sunset-techniques.html">How to Paint Watercolor Sunsets: 7 Techniques Every Artist Should Master</a></h3>
+                    <p class="card-excerpt">Sunsets are watercolor at its most forgiving and its most demanding. Seven techniques from wet-on-wet washes to salt texture that will transform your sky painting.</p>
+                    <div class="card-meta">
+                        <span class="author">Elena Marchetti</span>
+                        <span class="dot-sep">&bull;</span>
+                        <time datetime="2026-08-13">Aug 13</time>
                     </div>
                 </article>
             </div>
@@ -808,7 +849,7 @@
                     <div class="article-grid" style="grid-template-columns: 1fr 1fr;">
                         <article class="card">
                             <div class="card-image">
-                                <img src="https://images.unsplash.com/photo-1582761272517 candy?w=600&q=80" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1503602642128-0497181ed9d7?w=600&q=80'" alt="Vintage paintbrushes arranged on a wooden surface">
+                                <img src="articles/headers/oil-painting-mediums-guide.png" loading="lazy" alt="Vintage paintbrushes arranged on a wooden surface">
                             </div>
                             <span class="card-category">Materials</span>
                             <h3><a href="article.html">The Best Pigments You're Not Using (But Should Be)</a></h3>
@@ -822,7 +863,7 @@
 
                         <article class="card">
                             <div class="card-image">
-                                <img src="https://images.unsplash.com/photo-1549887534-154b029404ce?w=600&q=80" alt="Large-scale mural on a city wall in progress" loading="lazy">
+                                <img src="articles/headers/artist-spotlight-tomas-herrera.png" alt="Large-scale mural on a city wall in progress" loading="lazy">
                             </div>
                             <span class="card-category">Public Art</span>
                             <h3><a href="article.html">The Muralists Rewriting the Language of the City Wall</a></h3>
@@ -836,7 +877,7 @@
 
                         <article class="card">
                             <div class="card-image">
-                                <img src="https://images.unsplash.com/photo-1505691938895-1758d72e872c?w=600&q=80" alt="Abstract artwork with bold geometric shapes and warm colors" loading="lazy">
+                                <img src="articles/headers/photography-finding-your-eye.png" alt="Abstract artwork with bold geometric shapes and warm colors" loading="lazy">
                             </div>
                             <span class="card-category">Criticism</span>
                             <h3><a href="article.html">Against Beauty: A Case for Difficulty in Contemporary Painting</a></h3>
@@ -850,7 +891,7 @@
 
                         <article class="card">
                             <div class="card-image">
-                                <img src="https://images.unsplash.com/photo-1577083552431-6e5fd01988ec?w=600&q=80" alt="Ceramic vessels arranged in an artist's studio" loading="lazy">
+                                <img src="articles/headers/oil-painting-essentials.png" alt="Ceramic vessels arranged in an artist's studio" loading="lazy">
                             </div>
                             <span class="card-category">Craft</span>
                             <h3><a href="article.html">The Vessel and the Void: Pottery's Quiet Philosophical Turn</a></h3>
@@ -904,12 +945,12 @@
                     <div class="sidebar-section instagram-section">
                         <div class="sidebar-title">Follow @brushedpast</div>
                         <div class="ig-grid">
-                            <div><img src="https://images.unsplash.com/photo-1582761272517 candy?w=300&q=70" onerror="this.src='https://images.unsplash.com/photo-1503602642128-0497181ed9d7?w=300&q=70'" alt="Instagram post"></div>
-                            <div><img src="https://images.unsplash.com/photo-1513519247252-1d1c47ee1ad0?w=300&q=70" alt="Instagram post"></div>
-                            <div><img src="https://images.unsplash.com/photo-1547826039-bfc35e050d09?w=300&q=70" alt="Instagram post"></div>
-                            <div><img src="https://images.unsplash.com/photo-1531913764164-f85c52e6e484?w=300&q=70" alt="Instagram post"></div>
-                            <div><img src="https://images.unsplash.com/photo-1561214115-f2f134fae1aa?w=300&q=70" alt="Instagram post"></div>
-                            <div><img src="https://images.unsplash.com/photo-1499781350541-7783c6751653?w=300&q=70" alt="Instagram post"></div>
+                            <div><img src="articles/headers/watercolor-techniques.png" alt="Instagram post"></div>
+                            <div><img src="articles/headers/oil-painting-impasto.png" alt="Instagram post"></div>
+                            <div><img src="articles/headers/digital-art-authenticity.png" alt="Instagram post"></div>
+                            <div><img src="articles/headers/artist-spotlight-tomas-herrera.png" alt="Instagram post"></div>
+                            <div><img src="articles/headers/digital-art-creation.png" alt="Instagram post"></div>
+                            <div><img src="articles/headers/bauhaus-art-history-myth.png" alt="Instagram post"></div>
                         </div>
                     </div>
                 </aside>
@@ -928,6 +969,60 @@
                 <button type="submit">Subscribe</button>
             </form>
             <p class="newsletter-fine">Unsubscribe anytime. We never share your address.</p>
+        </div>
+    </section>
+
+    <!-- Recommended Art Supplies -->
+    <section class="recommended-supplies">
+        <div class="container">
+            <h2>Recommended <span style="color:var(--gold);">Art Supplies</span></h2>
+            <p class="supplies-intro">Tools we reach for in the studio — from professional-grade watercolor sets to the brushes that make sunset washes sing.</p>
+            <div class="supplies-grid">
+                <div class="supply-item">
+                    <img src="articles/headers/watercolor-techniques.png" alt="Watercolor paint set">
+                    <div class="supply-info">
+                        <h3><a href="https://amzn.to/4g8edqN">Daniel Smith Essential Watercolor Set</a></h3>
+                        <p>Professional-grade pigments with exceptional granulation — perfect for sunset washes and atmospheric effects.</p>
+                    </div>
+                </div>
+                <div class="supply-item">
+                    <img src="articles/headers/oil-painting-essentials.png" alt="Oil painting supplies">
+                    <div class="supply-info">
+                        <h3><a href="https://amzn.to/4g8edqN">Round Watercolor Brush Set (Sizes 4–12)</a></h3>
+                        <p>A versatile range of Kolinsky and squirrel-hair brushes for everything from fine detail to broad washes.</p>
+                    </div>
+                </div>
+                <div class="supply-item">
+                    <img src="articles/headers/oil-painting-mediums-guide.png" alt="Paint mediums and supplies">
+                    <div class="supply-info">
+                        <h3><a href="https://amzn.to/4g8edqN">Cold-Pressed Watercolor Paper Block</a></h3>
+                        <p>140lb / 300gsm archival paper with the tooth and texture that makes watercolor granulation come alive.</p>
+                    </div>
+                </div>
+                <div class="supply-item">
+                    <img src="articles/headers/oil-painting-impasto.png" alt="Oil painting materials">
+                    <div class="supply-info">
+                        <h3><a href="https://amzn.to/4g8edqN">Artist's Gouache Set — 24 Colors</a></h3>
+                        <p>Opaque, matte-finish pigments that blend beautifully and dry to a velvety, lightfast finish.</p>
+                    </div>
+                </div>
+            </div>
+            <p class="supply-disclosure">This article contains affiliate links. If you purchase through these links, we may earn a commission at no extra cost to you. We only recommend products we genuinely believe in.</p>
+        </div>
+    </section>
+
+    <!-- Network Ad Section -->
+    <section class="network-promo-section">
+        <div class="container">
+            <h2>Explore the <span style="color:var(--gold-light);">Calitoy Media Network</span></h2>
+            <p>Brushed Past is part of a growing family of independent publications. Discover more from our sister sites:</p>
+            <div class="network-links">
+                <a href="https://brushedpast.com">🎨 Brushed Past — Art &amp; Creativity</a>
+                <a href="https://girlnextup.com">✨ Girl Next Up — Incredible Humans</a>
+                <a href="https://risentoday.com">🌅 Risen Today — Spirituality &amp; Mindfulness</a>
+                <a href="https://spoofdaily.com">🎭 Spoof Daily — Humor &amp; Satire</a>
+                <a href="https://openedterminal.com">💻 Opened Terminal — Tech &amp; AI</a>
+            </div>
         </div>
     </section>
 
@@ -976,6 +1071,14 @@
                     <a href="#" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
                     <a href="#" aria-label="RSS"><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1" fill="currentColor"/></svg></a>
                 </div>
+            </div>
+            <div class="network-footer">
+                Part of the Calitoy Media Network —
+                <a href="https://brushedpast.com">Brushed Past</a> ·
+                <a href="https://girlnextup.com">Girl Next Up</a> ·
+                <a href="https://risentoday.com">Risen Today</a> ·
+                <a href="https://spoofdaily.com">Spoof Daily</a> ·
+                <a href="https://openedterminal.com">Opened Terminal</a>
             </div>
         </div>
     </footer>
