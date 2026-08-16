@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brushed Past — Art, Artists & the Stories Behind the Canvas</title>
+    <meta name="description" content="Brushed Past is an online art magazine exploring contemporary painting, sculpture, illustration, and the creative process. Long-form features, artist interviews, and exhibition reviews.">
+    <meta name="keywords" content="art magazine, contemporary art, artist interviews, painting, sculpture, illustration, art criticism, exhibition reviews">
+    <meta name="author" content="Brushed Past">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://brushedpast.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Brushed Past — Art, Artists & the Stories Behind the Canvas">
+    <meta property="og:description" content="An online art magazine exploring contemporary painting, sculpture, illustration, and the creative process.">
+    <meta property="og:url" content="https://brushedpast.com/">
+    <meta property="og:image" content="https://brushedpast.com/og-image.jpg">
+    <meta property="og:site_name" content="Brushed Past">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Brushed Past — Art, Artists & the Stories Behind the Canvas">
+    <meta name="twitter:description" content="An online art magazine exploring contemporary painting, sculpture, illustration, and the creative process.">
+    <meta name="twitter:image" content="https://brushedpast.com/og-image.jpg">
+    <meta name="twitter:site" content="@brushedpast">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23b85c38'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='%23f4ead5' font-family='Georgia,serif' font-weight='bold'>B</text></svg>">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Brushed Past",
+        "url": "https://brushedpast.com/",
+        "description": "An online art magazine exploring contemporary painting, sculpture, illustration, and the creative process.",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://brushedpast.com/search?q={query}",
+            "query-input": "required name=query"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Brushed Past",
+            "url": "https://brushedpast.com/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://brushedpast.com/logo.png",
+                "width": 600,
+                "height": 60
+            }
+        }
+    }
+    </script>
+
+    <style>
+        /* ============ Reset & Base ============ */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --terracotta: #b85c38;
+            --terracotta-dark: #8f4329;
+            --terracotta-light: #c97b5a;
+            --gold: #c9a14a;
+            --gold-light: #e0c478;
+            --cream: #f4ead5;
+            --cream-light: #fbf6ea;
+            --cream-dark: #e8dcc0;
+            --ink: #2b1d14;
+            --ink-soft: #4a3a2e;
+            --ink-muted: #7a6a5a;
+            --line: #d9cbb0;
+            --white: #ffffff;
+
+            --serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+            --max-width: 1200px;
+            --reading-width: 740px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--sans);
+            color: var(--ink);
+            background-color: var(--cream-light);
+            line-height: 1.65;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--serif);
+            color: var(--ink);
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        a { color: var(--terracotta); text-decoration: none; transition: color .2s ease; }
+        a:hover { color: var(--terracotta-dark); }
+
+        img { max-width: 100%; height: auto; display: block; }
+
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+
+        /* ============ Top Bar ============ */
+        .topbar {
+            background: var(--ink);
+            color: var(--cream);
+            font-size: 13px;
+            padding: 8px 0;
+            text-align: center;
+            letter-spacing: .04em;
+        }
+        .topbar a { color: var(--gold-light); }
+        .topbar a:hover { color: var(--cream); }
+
+        /* ============ Header / Nav ============ */
+        header.site-header {
+            background: var(--cream-light);
+            border-bottom: 1px solid var(--line);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 0 rgba(0,0,0,.02);
+        }
+        .nav-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 0;
+            gap: 32px;
+        }
+        .logo {
+            font-family: var(--serif);
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--terracotta);
+            letter-spacing: -.01em;
+            line-height: 1;
+            display: flex;
+            align-items: baseline;
+            gap: 2px;
+        }
+        .logo .dot { color: var(--gold); }
+        .logo a { color: inherit; }
+        .logo a:hover { color: var(--terracotta-dark); }
+
+        nav.main-nav ul {
+            list-style: none;
+            display: flex;
+            gap: 28px;
+        }
+        nav.main-nav a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--ink-soft);
+            letter-spacing: .02em;
+            padding-bottom: 4px;
+            border-bottom: 2px solid transparent;
+            transition: border-color .2s ease, color .2s ease;
+        }
+        nav.main-nav a:hover { color: var(--terracotta); border-color: var(--gold); }
+
+        .nav-actions { display: flex; align-items: center; gap: 16px; }
+        .icon-btn {
+            background: none; border: none; cursor: pointer;
+            color: var(--ink-soft); padding: 4px;
+        }
+        .icon-btn svg { width: 20px; height: 20px; }
+
+        .menu-toggle {
+            display: none;
+            background: none; border: none; cursor: pointer;
+            flex-direction: column; gap: 5px; padding: 4px;
+        }
+        .menu-toggle span {
+            width: 24px; height: 2px; background: var(--ink); border-radius: 2px;
+            transition: all .3s ease;
+        }
+
+        /* ============ Hero ============ */
+        .hero {
+            background: linear-gradient(160deg, var(--cream) 0%, var(--cream-light) 100%);
+            padding: 72px 0 64px;
+            border-bottom: 1px solid var(--line);
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: var(--terracotta);
+            margin-bottom: 20px;
+        }
+        .hero-eyebrow::before {
+            content: ''; width: 24px; height: 1px; background: var(--gold);
+        }
+        .hero h1 {
+            font-size: clamp(34px, 5vw, 56px);
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: -.015em;
+        }
+        .hero h1 em {
+            font-style: italic;
+            color: var(--terracotta);
+            font-weight: 400;
+        }
+        .hero-deck {
+            font-size: 19px;
+            color: var(--ink-soft);
+            margin-bottom: 28px;
+            max-width: 560px;
+        }
+        .hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 14px;
+            color: var(--ink-muted);
+            margin-bottom: 32px;
+        }
+        .hero-meta .author { font-weight: 600; color: var(--ink); }
+        .hero-meta .dot-sep { color: var(--gold); }
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--terracotta);
+            color: var(--cream-light);
+            padding: 13px 28px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 2px;
+            letter-spacing: .03em;
+            transition: background .2s ease, transform .15s ease;
+        }
+        .btn-primary:hover { background: var(--terracotta-dark); color: var(--cream-light); transform: translateY(-1px); }
+        .hero-image-wrap {
+            position: relative;
+            aspect-ratio: 5 / 4;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 24px 50px -20px rgba(43,29,20,.35);
+        }
+        .hero-image-wrap img { width: 100%; height: 100%; object-fit: cover; }
+        .hero-image-tag {
+            position: absolute; top: 16px; left: 16px;
+            background: var(--cream-light);
+            color: var(--terracotta);
+            font-size: 11px; font-weight: 700;
+            letter-spacing: .1em; text-transform: uppercase;
+            padding: 6px 12px; border-radius: 2px;
+        }
+
+        /* ============ Category Nav Strip ============ */
+        .category-strip {
+            background: var(--white);
+            border-bottom: 1px solid var(--line);
+            padding: 20px 0;
+        }
+        .category-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 14px;
+            justify-content: center;
+        }
+        .category-list a {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--ink-soft);
+            padding: 7px 16px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            transition: all .2s ease;
+        }
+        .category-list a:hover, .category-list a.active {
+            background: var(--terracotta);
+            color: var(--cream-light);
+            border-color: var(--terracotta);
+        }
+
+        /* ============ Section Headings ============ */
+        .section { padding: 64px 0; }
+        .section-head {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 18px;
+        }
+        .section-head h2 {
+            font-size: clamp(26px, 3.5vw, 38px);
+            font-weight: 700;
+            letter-spacing: -.01em;
+        }
+        .section-head h2 span { color: var(--gold); }
+        .section-head .see-all {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--terracotta);
+            letter-spacing: .05em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+        .section-head .see-all:hover { color: var(--terracotta-dark); }
+
+        /* ============ Article Grid ============ */
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 36px;
+        }
+        .card {
+            display: flex;
+            flex-direction: column;
+        }
+        .card-image {
+            aspect-ratio: 4 / 3;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 18px;
+            position: relative;
+        }
+        .card-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+        .card:hover .card-image img { transform: scale(1.04); }
+        .card-category {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: var(--terracotta);
+            margin-bottom: 10px;
+        }
+        .card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.25;
+        }
+        .card h3 a { color: var(--ink); }
+        .card h3 a:hover { color: var(--terracotta); }
+        .card-excerpt {
+            font-size: 15px;
+            color: var(--ink-soft);
+            margin-bottom: 14px;
+        }
+        .card-meta {
+            margin-top: auto;
+            font-size: 13px;
+            color: var(--ink-muted);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .card-meta .author { font-weight: 600; color: var(--ink-soft); }
+        .card-meta .dot-sep { color: var(--gold); }
+
+        /* ============ Featured / Wide article ============ */
+        .featured-wide {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+            margin-bottom: 56px;
+            background: var(--white);
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 4px 30px -10px rgba(43,29,20,.12);
+        }
+        .featured-wide .fw-image { aspect-ratio: 4 / 3; overflow: hidden; }
+        .featured-wide .fw-image img { width: 100%; height: 100%; object-fit: cover; }
+        .featured-wide .fw-content { padding: 40px 44px; }
+        .featured-wide .card-category { margin-bottom: 14px; }
+        .featured-wide h2 {
+            font-size: clamp(26px, 3vw, 40px);
+            margin-bottom: 16px;
+            line-height: 1.18;
+        }
+        .featured-wide .fw-excerpt { font-size: 17px; color: var(--ink-soft); margin-bottom: 20px; }
+        .featured-wide .card-meta { font-size: 14px; }
+
+        /* ============ Two-col Layout ============ */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 340px;
+            gap: 56px;
+            align-items: start;
+        }
+
+        /* ============ Sidebar / Trending ============ */
+        .sidebar-section {
+            margin-bottom: 44px;
+        }
+        .sidebar-title {
+            font-family: var(--serif);
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--terracotta);
+            display: inline-block;
+        }
+        .trending-list { list-style: none; counter-reset: trending; }
+        .trending-list li {
+            display: flex;
+            gap: 16px;
+            padding: 18px 0;
+            border-bottom: 1px solid var(--line);
+            counter-increment: trending;
+        }
+        .trending-list li::before {
+            content: counter(trending, decimal-leading-zero);
+            font-family: var(--serif);
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--gold);
+            line-height: 1;
+            min-width: 40px;
+        }
+        .trending-list h4 {
+            font-family: var(--sans);
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: 4px;
+        }
+        .trending-list h4 a { color: var(--ink); }
+        .trending-list h4 a:hover { color: var(--terracotta); }
+        .trending-list .trend-cat {
+            font-size: 11px; font-weight: 700;
+            text-transform: uppercase; letter-spacing: .1em;
+            color: var(--terracotta);
+        }
+
+        .instagram-section { text-align: center; }
+        .ig-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4px;
+            margin-top: 16px;
+        }
+        .ig-grid div {
+            aspect-ratio: 1;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        .ig-grid div img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* ============ Newsletter ============ */
+        .newsletter {
+            background: var(--ink);
+            color: var(--cream);
+            padding: 72px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .newsletter::before {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0; height: 4px;
+            background: linear-gradient(90deg, var(--terracotta), var(--gold), var(--terracotta));
+        }
+        .newsletter-inner { max-width: 580px; margin: 0 auto; padding: 0 24px; }
+        .newsletter .eyebrow {
+            font-size: 12px; font-weight: 600; letter-spacing: .12em;
+            text-transform: uppercase; color: var(--gold-light); margin-bottom: 16px;
+            display: block;
+        }
+        .newsletter h2 {
+            color: var(--cream-light);
+            font-size: clamp(28px, 4vw, 42px);
+            margin-bottom: 16px;
+            line-height: 1.15;
+        }
+        .newsletter p {
+            color: var(--cream-dark);
+            font-size: 16px;
+            margin-bottom: 28px;
+        }
+        .newsletter-form {
+            display: flex;
+            gap: 10px;
+            max-width: 460px;
+            margin: 0 auto;
+        }
+        .newsletter-form input {
+            flex: 1;
+            padding: 14px 18px;
+            border: 1px solid var(--ink-soft);
+            background: rgba(255,255,255,.06);
+            color: var(--cream);
+            font-family: var(--sans);
+            font-size: 15px;
+            border-radius: 2px;
+        }
+        .newsletter-form input::placeholder { color: var(--cream-dark); }
+        .newsletter-form input:focus { outline: none; border-color: var(--gold); }
+        .newsletter-form button {
+            background: var(--terracotta);
+            color: var(--cream-light);
+            border: none;
+            padding: 14px 28px;
+            font-family: var(--sans);
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: .03em;
+            cursor: pointer;
+            border-radius: 2px;
+            transition: background .2s ease;
+        }
+        .newsletter-form button:hover { background: var(--terracotta-light); }
+        .newsletter-fine {
+            font-size: 12px; color: var(--ink-muted); margin-top: 16px;
+        }
+
+        /* ============ Footer ============ */
+        footer.site-footer {
+            background: var(--cream-dark);
+            color: var(--ink-soft);
+            padding: 56px 0 24px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-brand .logo { margin-bottom: 16px; }
+        .footer-brand p { font-size: 14px; color: var(--ink-muted); max-width: 280px; }
+        .footer-col h4 {
+            font-family: var(--sans);
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+            color: var(--ink);
+            margin-bottom: 16px;
+        }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 10px; }
+        .footer-col ul a { font-size: 14px; color: var(--ink-soft); }
+        .footer-col ul a:hover { color: var(--terracotta); }
+
+        .footer-bottom {
+            border-top: 1px solid var(--line);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            color: var(--ink-muted);
+        }
+        .footer-social { display: flex; gap: 14px; }
+        .footer-social a { color: var(--ink-soft); }
+        .footer-social a:hover { color: var(--terracotta); }
+        .footer-social svg { width: 18px; height: 18px; }
+
+        /* ============ Responsive ============ */
+        @media (max-width: 980px) {
+            .hero-grid { grid-template-columns: 1fr; gap: 36px; }
+            .hero-image-wrap { aspect-ratio: 16 / 10; }
+            .article-grid { grid-template-columns: repeat(2, 1fr); }
+            .two-col { grid-template-columns: 1fr; gap: 48px; }
+            .featured-wide { grid-template-columns: 1fr; }
+            .featured-wide .fw-content { padding: 32px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+        }
+
+        @media (max-width: 680px) {
+            nav.main-nav { display: none; }
+            .menu-toggle { display: flex; }
+            nav.main-nav.open {
+                display: block;
+                position: absolute; top: 100%; left: 0; right: 0;
+                background: var(--cream-light); border-bottom: 1px solid var(--line);
+                padding: 16px 24px;
+            }
+            nav.main-nav.open ul { flex-direction: column; gap: 0; }
+            nav.main-nav.open li { padding: 10px 0; border-bottom: 1px solid var(--line); }
+            nav.main-nav.open a { display: block; }
+            .article-grid { grid-template-columns: 1fr; }
+            .section-head { flex-direction: column; align-items: flex-start; gap: 10px; }
+            .newsletter-form { flex-direction: column; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 14px; text-align: center; }
+            .hero { padding: 48px 0 40px; }
+            .section { padding: 48px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="topbar">
+        Art, observed closely. — <a href="#">Subscribe to the newsletter</a> for weekly dispatches.
+    </div>
+
+    <header class="site-header">
+        <div class="container">
+            <div class="nav-row">
+                <div class="logo"><a href="index.html">Brushed<span class="dot">.</span>Past</a></div>
+                <nav class="main-nav" id="mainNav">
+                    <ul>
+                        <li><a href="#">Painting</a></li>
+                        <li><a href="#">Sculpture</a></li>
+                        <li><a href="#">Illustration</a></li>
+                        <li><a href="#">Interviews</a></li>
+                        <li><a href="#">Exhibitions</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </nav>
+                <div class="nav-actions">
+                    <button class="icon-btn" aria-label="Search">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <span class="hero-eyebrow">Featured Story</span>
+                    <h1>The Quiet Revival of Figurative <em>Painting</em></h1>
+                    <p class="hero-deck">After decades of conceptual dominance, a generation of artists is returning to the body — but with a new vocabulary. Inside the studios reshaping how we see the human form.</p>
+                    <div class="hero-meta">
+                        <span class="author">By Elena Marchetti</span>
+                        <span class="dot-sep">●</span>
+                        <span>12 min read</span>
+                        <span class="dot-sep">●</span>
+                        <time datetime="2026-08-04">Aug 4, 2026</time>
+                    </div>
+                    <a href="article.html" class="btn-primary">Read the story →</a>
+                </div>
+                <div class="hero-image-wrap">
+                    <span class="hero-image-tag">Cover</span>
+                    <img src="https://images.unsplash.com/photo-1578926375605-eafab1de8f67?w=900&q=80" alt="Artist at work in a studio with warm terracotta light, oil painting on a large canvas" loading="eager">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Strip -->
+    <div class="category-strip">
+        <div class="container">
+            <div class="category-list">
+                <a href="#" class="active">All</a>
+                <a href="#">Painting</a>
+                <a href="#">Sculpture</a>
+                <a href="#">Illustration</a>
+                <a href="#">Photography</a>
+                <a href="#">Digital Art</a>
+                <a href="#">Art History</a>
+                <a href="#">Studio Visits</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Wide -->
+    <section class="section">
+        <div class="container">
+            <div class="featured-wide">
+                <div class="fw-image">
+                    <img src="https://images.unsplash.com/photo-1513519247252-1d1c47ee1ad0?w=800&q=80" alt="Large abstract canvas in a gallery with terracotta and ochre tones" loading="lazy">
+                </div>
+                <div class="fw-content">
+                    <span class="card-category">Studio Visit</span>
+                    <h2>In the Studio with Marisol Vega: Clay, Memory, and the Hand That Remembers</h2>
+                    <p class="fw-excerpt">The Oaxacan sculptor works at a scale that demands the whole body. We spent a morning in her workshop watching forms emerge from raw earth — and from something older.</p>
+                    <div class="card-meta">
+                        <span class="author">By Daniel Okonkwo</span>
+                        <span class="dot-sep">●</span>
+                        <span>8 min read</span>
+                        <span class="dot-sep">●</span>
+                        <time datetime="2026-07-29">Jul 29, 2026</time>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-head">
+                <h2>Latest <span>Stories</span></h2>
+                <a href="#" class="see-all">View All →</a>
+            </div>
+
+            <div class="article-grid">
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1547826039-bfc35e050d09?w=600&q=80" alt="Detail of an oil painting with thick impasto brushwork in warm tones" loading="lazy">
+                    </div>
+                    <span class="card-category">Painting</span>
+                    <h3><a href="article.html">Why Impasto Never Really Went Away</a></h3>
+                    <p class="card-excerpt">The thick, tactile paint of the post-impressionists is having a quiet moment — and a new generation is finding freedom in the visible brushstroke.</p>
+                    <div class="card-meta">
+                        <span class="author">Priya Anand</span>
+                        <span class="dot-sep">●</span>
+                        <time datetime="2026-07-22">Jul 22</time>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1531913764164-f85c52e6e484?w=600&q=80" alt="Bronze sculpture displayed in a minimalist gallery space" loading="lazy">
+                    </div>
+                    <span class="card-category">Sculpture</span>
+                    <h3><a href="article.html">Bronze, Reconsidered: Five Sculptors Redefining the Medium</a></h3>
+                    <p class="card-excerpt">Once the domain of monuments, bronze is now being stretched, hollowed, and reinvented by artists who refuse to treat it as fixed.</p>
+                    <div class="card-meta">
+                        <span class="author">Marcus Bell</span>
+                        <span class="dot-sep">●</span>
+                        <time datetime="2026-07-18">Jul 18</time>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1561214115-f2f134fae1aa?w=600&q=80" alt="Illustrator's desk with ink drawings and brushes arranged neatly" loading="lazy">
+                    </div>
+                    <span class="card-category">Illustration</span>
+                    <h3><a href="article.html">The Ink-First Movement: Why Illustrators Are Returning to the Pen</a></h3>
+                    <p class="card-excerpt">Digital tools promised infinite control. So why are so many illustrators trading tablets for nibs, ink, and the risk of a line you can't undo?</p>
+                    <div class="card-meta">
+                        <span class="author">Sofia Reyes</span>
+                        <span class="dot-sep">●</span>
+                        <time datetime="2026-07-15">Jul 15</time>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1499781350541-7783c6751653?w=600&q=80" alt="Gallery wall with a series of framed artworks in warm light" loading="lazy">
+                    </div>
+                    <span class="card-category">Exhibitions</span>
+                    <h3><a href="article.html">What We Saw at the Venice Biennale: Eight Pavilions That Stayed</a></h3>
+                    <p class="card-excerpt">The crowds always cluster around the same three rooms. Here are the quieter pavilions that deserved more attention — and the work we're still thinking about.</p>
+                    <div class="card-meta">
+                        <span class="author">Elena Marchetti</span>
+                        <span class="dot-sep">●</span>
+                        <time datetime="2026-07-10">Jul 10</time>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1554188248-986cbb9a3453?w=600&q=80" alt="Digital artwork displayed on a large screen at an art fair" loading="lazy">
+                    </div>
+                    <span class="card-category">Digital Art</span>
+                    <h3><a href="article.html">Beyond the Screen: Where Digital Art Meets the Physical Object</a></h3>
+                    <p class="card-excerpt">The conversation around digital art has moved past novelty. The interesting work now happens in the seam between pixels and matter.</p>
+                    <div class="card-meta">
+                        <span class="author">Daniel Okonkwo</span>
+                        <span class="dot-sep">●</span>
+                        <time datetime="2026-07-06">Jul 6</time>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1577720580479-7d7399e45822?w=600&q=80" alt="Close-up of an artist's hands mixing oil paint on a wooden palette" loading="lazy">
+                    </div>
+                    <span class="card-category">Art History</span>
+                    <h3><a href="article.html">The Forgotten Women of the Bauhaus Weaving Workshops</a></h3>
+                    <p class="card-excerpt">They were directed to the looms rather than the architecture studios. A century later, their textile work is being recognized as some of the school's most radical output.</p>
+                    <div class="card-meta">
+                        <span class="author">Priya Anand</span>
+                        <span class="dot-sep">●</span>
+                        <time datetime="2026-07-01">Jul 1</time>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Two Column: More articles + Sidebar -->
+    <section class="section" style="padding-top:0;">
+        <div class="container">
+            <div class="two-col">
+                <div class="main-col">
+                    <div class="section-head">
+                        <h2>From the <span>Archive</span></h2>
+                        <a href="#" class="see-all">View All →</a>
+                    </div>
+                    <div class="article-grid" style="grid-template-columns: 1fr 1fr;">
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1582761272517 candy?w=600&q=80" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1503602642128-0497181ed9d7?w=600&q=80'" alt="Vintage paintbrushes arranged on a wooden surface">
+                            </div>
+                            <span class="card-category">Materials</span>
+                            <h3><a href="article.html">The Best Pigments You're Not Using (But Should Be)</a></h3>
+                            <p class="card-excerpt">A working painter's guide to overlooked colors — from caput mortuum to Maya blue — and what they bring to a palette that cadmiums cannot.</p>
+                            <div class="card-meta">
+                                <span class="author">Marcus Bell</span>
+                                <span class="dot-sep">●</span>
+                                <time datetime="2026-06-24">Jun 24</time>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1549887534-154b029404ce?w=600&q=80" alt="Large-scale mural on a city wall in progress" loading="lazy">
+                            </div>
+                            <span class="card-category">Public Art</span>
+                            <h3><a href="article.html">The Muralists Rewriting the Language of the City Wall</a></h3>
+                            <p class="card-excerpt">Street art grew up. The new muralists aren't tagging — they're commissioning, and the walls they paint reshape how neighborhoods see themselves.</p>
+                            <div class="card-meta">
+                                <span class="author">Sofia Reyes</span>
+                                <span class="dot-sep">●</span>
+                                <time datetime="2026-06-19">Jun 19</time>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1505691938895-1758d72e872c?w=600&q=80" alt="Abstract artwork with bold geometric shapes and warm colors" loading="lazy">
+                            </div>
+                            <span class="card-category">Criticism</span>
+                            <h3><a href="article.html">Against Beauty: A Case for Difficulty in Contemporary Painting</a></h3>
+                            <p class="card-excerpt">Not everything is meant to soothe. An argument for the paintings that resist, that refuse to be hung above the couch, and why that refusal matters now.</p>
+                            <div class="card-meta">
+                                <span class="author">Elena Marchetti</span>
+                                <span class="dot-sep">●</span>
+                                <time datetime="2026-06-12">Jun 12</time>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <div class="card-image">
+                                <img src="https://images.unsplash.com/photo-1577083552431-6e5fd01988ec?w=600&q=80" alt="Ceramic vessels arranged in an artist's studio" loading="lazy">
+                            </div>
+                            <span class="card-category">Craft</span>
+                            <h3><a href="article.html">The Vessel and the Void: Pottery's Quiet Philosophical Turn</a></h3>
+                            <p class="card-excerpt">A new wave of ceramicists is asking what a pot is for when it isn't for holding anything. The answers are stranger — and more beautiful — than you'd expect.</p>
+                            <div class="card-meta">
+                                <span class="author">Daniel Okonkwo</span>
+                                <span class="dot-sep">●</span>
+                                <time datetime="2026-06-05">Jun 5</time>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <aside class="sidebar">
+                    <div class="sidebar-section">
+                        <div class="sidebar-title">Most Read</div>
+                        <ol class="trending-list">
+                            <li>
+                                <div>
+                                    <div class="trend-cat">Painting</div>
+                                    <h4><a href="article.html">The Quiet Revival of Figurative Painting</a></h4>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <div class="trend-cat">Studio Visit</div>
+                                    <h4><a href="article.html">In the Studio with Marisol Vega</a></h4>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <div class="trend-cat">Art History</div>
+                                    <h4><a href="article.html">The Forgotten Women of the Bauhaus</a></h4>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <div class="trend-cat">Sculpture</div>
+                                    <h4><a href="article.html">Bronze, Reconsidered: Five Sculptors</a></h4>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <div class="trend-cat">Exhibitions</div>
+                                    <h4><a href="article.html">Eight Venice Pavilions That Stayed</a></h4>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="sidebar-section instagram-section">
+                        <div class="sidebar-title">Follow @brushedpast</div>
+                        <div class="ig-grid">
+                            <div><img src="https://images.unsplash.com/photo-1582761272517 candy?w=300&q=70" onerror="this.src='https://images.unsplash.com/photo-1503602642128-0497181ed9d7?w=300&q=70'" alt="Instagram post"></div>
+                            <div><img src="https://images.unsplash.com/photo-1513519247252-1d1c47ee1ad0?w=300&q=70" alt="Instagram post"></div>
+                            <div><img src="https://images.unsplash.com/photo-1547826039-bfc35e050d09?w=300&q=70" alt="Instagram post"></div>
+                            <div><img src="https://images.unsplash.com/photo-1531913764164-f85c52e6e484?w=300&q=70" alt="Instagram post"></div>
+                            <div><img src="https://images.unsplash.com/photo-1561214115-f2f134fae1aa?w=300&q=70" alt="Instagram post"></div>
+                            <div><img src="https://images.unsplash.com/photo-1499781350541-7783c6751653?w=300&q=70" alt="Instagram post"></div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="newsletter-inner">
+            <span class="eyebrow">The Brushed Past Dispatch</span>
+            <h2>Art worth slowing down for, in your inbox weekly.</h2>
+            <p>One thoughtfully edited email each week: a long-form feature, a studio visit, and a piece of art criticism we believe in. No noise, no listicles, no sponsored posts.</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed ✓';">
+                <input type="email" placeholder="your@email.com" required aria-label="Email address">
+                <button type="submit">Subscribe</button>
+            </form>
+            <p class="newsletter-fine">Unsubscribe anytime. We never share your address.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo"><a href="index.html">Brushed<span class="dot">.</span>Past</a></div>
+                    <p>An independent art magazine covering contemporary painting, sculpture, illustration, and the creative process — one story at a time.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Sections</h4>
+                    <ul>
+                        <li><a href="#">Painting</a></li>
+                        <li><a href="#">Sculpture</a></li>
+                        <li><a href="#">Illustration</a></li>
+                        <li><a href="#">Exhibitions</a></li>
+                        <li><a href="#">Studio Visits</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Contributors</a></li>
+                        <li><a href="#">Submissions</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Advertise</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow</h4>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">RSS</a></li>
+                        <li><a href="#">Spotify</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Brushed Past. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+                    <a href="#" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                    <a href="#" aria-label="RSS"><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1" fill="currentColor"/></svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('mainNav').classList.toggle('open');
+        });
+    </script>
+
+</body>
+</html>
